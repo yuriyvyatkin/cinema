@@ -1,0 +1,53 @@
+body {
+  overflow: hidden;
+
+  background: radial-gradient(at 50% -20%, #908392, #0d060e) fixed;
+  background-color: #141019;
+}
+
+#handboy {
+  transform-origin: 98% 98%;
+  animation: swing ease-in-out 1.3s infinite alternate;
+
+  transform-box: fill-box;
+}
+
+#girllight {
+  transform-origin: 0 97%;
+  animation: swing ease-in-out 1.3s infinite alternate;
+
+  transform-box: fill-box;
+}
+
+#hairgirl {
+  transform-origin: 60% 0;
+  animation: swinghair ease-in-out 1.3s infinite alternate;
+
+  transform-box: fill-box;
+}
+
+#zero {
+  transform-origin: bottom;
+
+  transform-box: fill-box;
+}
+
+/* ~~~~~~~~~~~~ раскачивание ~~~~~~~~~~~~ */
+@keyframes swing {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+/* ~~~~~~~~~~~~ раскачивание волос ~~~~~~~~~~~~ */
+@keyframes swinghair {
+  0% {
+    transform: rotate(6deg);
+  }
+  100% {
+    transform: rotate(-6deg);
+  }
+}
