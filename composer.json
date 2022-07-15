@@ -50,9 +50,8 @@
         ],
         "app-deploy": [
             "@composer install",
-            "@php -f dbmaker.php",
-            "@php artisan app:install",
-            "@php artisan serve"
+            "@php -f ./dbmaker.php",
+            "@php artisan app:install"
         ]
     },
     "extra": {
