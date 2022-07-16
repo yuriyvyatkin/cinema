@@ -46,8 +46,10 @@ export default class PricesConfigurator {
   }
 
   handleResetButton() {
-    this.form.addEventListener('reset', ({target}) => {
-      target.dataset.currentHall = '';
+    this.form.addEventListener('reset', (event) => {
+      event.preventDefault();
+
+      this.selectorsBox.querySelector('input').click();
     });
   }
 

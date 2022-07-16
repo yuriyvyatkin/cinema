@@ -312,6 +312,8 @@ body {
 
 a.form__button-submit {
   max-width: fit-content;
+
+  text-decoration: unset;
 }
 
 .form__button-submit:hover,

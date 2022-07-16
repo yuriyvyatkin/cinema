@@ -508,9 +508,12 @@ var PricesConfigurator = /*#__PURE__*/function () {
   }, {
     key: "handleResetButton",
     value: function handleResetButton() {
-      this.form.addEventListener('reset', function (_ref4) {
-        var target = _ref4.target;
-        target.dataset.currentHall = '';
+      var _this2 = this;
+
+      this.form.addEventListener('reset', function (event) {
+        event.preventDefault();
+
+        _this2.selectorsBox.querySelector('input').click();
       });
     }
   }, {

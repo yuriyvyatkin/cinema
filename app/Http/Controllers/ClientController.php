@@ -70,17 +70,21 @@ class ClientController extends Controller
       $sessions = [];
 
       foreach ($movie->sessions as $session) {
-        $sessions[] = [
-          'id'  => $session->id,
-          'start'  => $session->start_time,
-          'hallName' => $session->hall->name,
-        ];
+        if ($session->hall->sales_state) {
+          $sessions[] = [
+            'id'  => $session->id,
+            'start'  => $session->start_time,
+            'hallName' => $session->hall->name,
+          ];
+        }
       }
 
-      $groupedSessions = collect($sessions)->groupBy('hallName')->all();
-      $nextElement->sessions = $groupedSessions;
+      if (count($sessions)) {
+        $groupedSessions = collect($sessions)->groupBy('hallName')->all();
+        $nextElement->sessions = $groupedSessions;
 
-      $pageData[] = $nextElement;
+        $pageData[] = $nextElement;
+      }
     }
 
     return view('client.index', [

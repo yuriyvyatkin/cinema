@@ -24,9 +24,9 @@ class SessionController extends Controller
     } else if (Session::count() === 0) {
       foreach ($sessions as $session) {
         $newSession = new Session;
-        $newSession->name = $session->name;
-        $newSession->duration = $session->duration;
-        $newSession->poster = $session->poster;
+        $newSession->movie_id = $session->movieId;
+        $newSession->hall_id = $session->hallId;
+        $newSession->start_time = $session->startTime;
         $newSession->save();
       }
     } else {
@@ -46,9 +46,9 @@ class SessionController extends Controller
 
       foreach ($filteredSessions as $session) {
         $newSession = new Session;
-        $newSession->name = $session->name;
-        $newSession->duration = $session->duration;
-        $newSession->poster = $session->poster;
+        $newSession->movie_id = $session->movieId;
+        $newSession->hall_id = $session->hallId;
+        $newSession->start_time = $session->startTime;
         $newSession->save();
       }
     }
