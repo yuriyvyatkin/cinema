@@ -16,12 +16,12 @@ class SessionSeeder extends Seeder
   {
     $sessions = [
       [
-        'movie_id' => 1,
+        'movie_id' => 9,
         'hall_id' => 1,
         'start_time' => '14:00',
       ],
       [
-        'movie_id' => 1,
+        'movie_id' => 9,
         'hall_id' => 2,
         'start_time' => '19:50',
       ],

@@ -38,11 +38,11 @@
 
           <label class="login__label" for="email">
             Электронная почта
-            <input class="login__input" id="email" type="email" placeholder="name@example.ru" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+            <input class="login__input" id="email" type="email" placeholder="name@example.ru" name="email" value="admin@mail.ru" required autocomplete="email" autofocus>
           </label>
           <label class="login__label" for="password">
             Пароль
-            <input class="login__input" id="password" type="password" name="password" required autocomplete="current-password">
+            <input class="login__input" id="password" type="password" name="password" value="1234" required autocomplete="current-password">
           </label>
           <label class="login__checkbox-label" for="remember">
             Запомнить меня

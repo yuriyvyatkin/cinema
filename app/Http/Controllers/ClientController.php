@@ -45,7 +45,7 @@ class ClientController extends Controller
   {
     $pageData = [];
 
-    $movies = $this->movieController->getMovies();
+    $movies = $this->movieController->getMovies()->sortBy('name');
 
     foreach ($movies as $movie) {
       if (count($movie->sessions) === 0) {

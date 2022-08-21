@@ -19,6 +19,17 @@ body {
   background-size: cover;
 }
 
+a.admin-button {
+  position: absolute;
+  top: -20px;
+  right: 35px;
+}
+
+a.admin-button:active {
+  position: absolute;
+  top: -18px;
+}
+
 .page-header {
   padding: 1.4rem;
 }
@@ -70,14 +81,14 @@ body {
   display: flex;
   flex-wrap: nowrap;
   align-items: stretch;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
 
   color: hsl(0, 0%, 0%);
 }
 
 .page-nav .page-nav__day {
   flex-basis: calc(100% / 8);
-  padding: 1rem;
+  padding: 1rem 1rem 0.5rem 1rem;
 
   font-size: 1.2rem;
 
@@ -126,7 +137,7 @@ body {
 .page-nav .page-nav__day_next::before {
   font-family: monospace;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 3rem;
 
   content: '>';
 }
@@ -138,7 +149,7 @@ body {
 .page-nav .page-nav__day_previous::before {
   font-family: monospace;
   font-weight: 700;
-  font-size: 2.4rem;
+  font-size: 3rem;
 
   content: '<';
 }
@@ -671,12 +682,6 @@ a.form__button-submit {
   margin: 3rem auto 0;
 
   background: hsl(0, 0%, 100%);
-}
-
-@media screen and (min-width: 479px) {
-  .page-nav .page-nav__day {
-    padding: 1rem 2rem;
-  }
 }
 
 @media screen and (min-width: 990px) {
