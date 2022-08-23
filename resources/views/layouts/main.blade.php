@@ -11,7 +11,7 @@
   <title>@yield('title') | Идём в кино</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 
   <!-- Scripts -->
   @yield('script')
