@@ -19,19 +19,20 @@ body {
   background-size: cover;
 }
 
+.page-header {
+  position: relative;
+
+  padding: 1.4rem;
+}
+
 a.admin-button {
   position: absolute;
   top: -20px;
-  right: 35px;
+  right: 0;
 }
 
 a.admin-button:active {
-  position: absolute;
   top: -18px;
-}
-
-.page-header {
-  padding: 1.4rem;
 }
 
 .page-header__title {

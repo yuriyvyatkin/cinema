@@ -11,8 +11,6 @@
 @section('title', 'Главная')
 
 @section('content')
-  <a class="admin-button form__button form__button-submit" href="/login">Администраторская</a>
-
   @include('components.client.header')
 
   <span class="hint nav-hint">Выберите дату посещения:</span>
