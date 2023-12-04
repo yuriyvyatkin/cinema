@@ -136,8 +136,8 @@ export default class HallsConfigurator {
       if (target.matches('.chairs-grid__chair')) {
         const substringIndex = target.className.lastIndexOf('_') + 1;
         const chairType = target.className.substring(substringIndex);
-        const chairTypesIndex = chairsTypes.indexOf(chairType);
-        const nextChairType = chairsTypes[(chairTypesIndex + 1) % chairsTypes.length];
+        const chairTypesIndex = this.chairsTypes.indexOf(chairType);
+        const nextChairType = this.chairsTypes[(chairTypesIndex + 1) % this.chairsTypes.length];
 
         target.className = target.className.replace(chairType, nextChairType);
       }

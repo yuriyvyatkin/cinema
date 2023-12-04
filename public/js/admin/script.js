@@ -191,14 +191,16 @@ var HallsConfigurator = /*#__PURE__*/function () {
   }, {
     key: "handleHallSchema",
     value: function handleHallSchema() {
+      var _this4 = this;
+
       this.hallSchema.addEventListener('click', function (_ref6) {
         var target = _ref6.target;
 
         if (target.matches('.chairs-grid__chair')) {
           var substringIndex = target.className.lastIndexOf('_') + 1;
           var chairType = target.className.substring(substringIndex);
-          var chairTypesIndex = chairsTypes.indexOf(chairType);
-          var nextChairType = chairsTypes[(chairTypesIndex + 1) % chairsTypes.length];
+          var chairTypesIndex = _this4.chairsTypes.indexOf(chairType);
+          var nextChairType = _this4.chairsTypes[(chairTypesIndex + 1) % _this4.chairsTypes.length];
           target.className = target.className.replace(chairType, nextChairType);
         }
       });
@@ -1243,7 +1245,7 @@ var SessionsConfigurator = /*#__PURE__*/function () {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -1257,14 +1259,14 @@ var SessionsConfigurator = /*#__PURE__*/function () {
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -1277,12 +1279,12 @@ var SessionsConfigurator = /*#__PURE__*/function () {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -1293,7 +1295,7 @@ var SessionsConfigurator = /*#__PURE__*/function () {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
